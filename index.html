@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Pazienti</title>
+    <link rel="icon" href="/assets/favicon-CJDXlT_J.svg" type="image/svg+xml">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Material+Icons&display=swap" rel="stylesheet">
+    
+    <!-- Gli stili sono ora importati esclusivamente tramite main.js -->
+  <script type="module" crossorigin src="/assets/index-B83wxZfZ.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/supabase-AmyKTmiY.js">
+  <link rel="modulepreload" crossorigin href="/assets/vendor-BU6HxVpN.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-CIUH-r2y.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navbar Desktop -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top d-none d-lg-block">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="#home">
+                    <img src="data:image/svg+xml,%3c!--%20Favicon%20semplice%20SVG%20per%20evitare%20404%20--%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3e%3ccircle%20cx='32'%20cy='32'%20r='30'%20fill='%230d6efd'/%3e%3cpath%20d='M20%2028h24v8H20z'%20fill='white'/%3e%3ccircle%20cx='26'%20cy='22'%20r='4'%20fill='white'/%3e%3ccircle%20cx='38'%20cy='22'%20r='4'%20fill='white'/%3e%3cpath%20d='M26%2040c0%206%206%2012%206%2012s6-6%206-12'%20fill='white'/%3e%3c/svg%3e" alt="Logo" width="30" height="24" class="d-inline-block align-text-top me-2">
+                    Gestione Pazienti
+                </a>
+                <div class="d-flex align-items-center gap-3">
+                    <button type="button" class="btn btn-outline-secondary btn-sm d-flex align-items-center" id="theme-toggle" title="Cambia tema">
+                        <span class="material-icons" id="theme-icon">dark_mode</span>
+                    </button>
+                    <div id="auth-container">
+                        <!-- Contenuto Auth UI iniettato qui -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Navbar Mobile -->
+        <nav class="mobile-navbar d-lg-none">
+            <div class="mobile-navbar-container">
+                <button id="mobile-theme-toggle" class="mobile-nav-action" title="Cambia tema">
+                    <span class="material-icons" id="mobile-theme-icon">dark_mode</span>
+                </button>
+                <a href="#home" id="mobile-home-link" class="mobile-nav-action" title="Home">
+                    <span class="material-icons">home</span>
+                </a>
+                <div id="mobile-auth-container" class="mobile-nav-action">
+                    <!-- L'icona di autenticazione verrà iniettata qui dal JavaScript -->
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mt-5" id="view-container"></div>
+
+        <div class="modal fade" id="delete-confirm-modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Conferma Eliminazione</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Sei sicuro di voler eliminare questo paziente? L'azione è irreversibile.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                        <button type="button" class="btn btn-danger" id="confirm-delete-btn">Elimina</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

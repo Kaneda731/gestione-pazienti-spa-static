@@ -1,0 +1,9 @@
+# JavaScript modules - serve directly if they exist
+/assets/*.js  /assets/:splat.js  200
+/*.js         /:splat.js         200
+
+# API routes (if any)
+/api/*        /api/:splat        200
+
+# SPA fallback - only for HTML routes
+/*            /index.html        200
